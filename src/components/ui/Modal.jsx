@@ -9,3 +9,5 @@ const Modal = ({ isOpen, onClose, children, className = "" }) => {
     </div>
   );
 };
+
+export default Modal;

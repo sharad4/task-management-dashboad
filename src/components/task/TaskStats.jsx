@@ -18,5 +18,23 @@ const TaskStats = ({ tasks }) => {
       color: "text-blue-600",
       bgColor: "bg-blue-50",
     },
+    {
+      title: "Completed",
+      value: completedTasks,
+      color: "text-green-600",
+      bgColor: "bg-green-50",
+    },
+    {
+      title: "In Preogress",
+      value: inProgressTasks,
+      color: "text-orange-600",
+      bgColor: "bg-orange-50",
+    },
+    {
+      title: "To Do",
+      value: todoTasks,
+      color: "text-gray-600",
+      bgColor: "bg-gray-50",
+    },
   ];
 };

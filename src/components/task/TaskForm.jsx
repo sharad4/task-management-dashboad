@@ -113,9 +113,9 @@ const TaskForm = ({ task, onSubmit, onCancel }) => {
             {isSubmitting ? "Saving..." : task ? "Update" : "Create"} Task
           </button>
           <button
-            type="submit"
-            disabled={isSubmitting}
-            className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50"
+            type="button"
+            disabled={onCancel}
+            className="px-6 py-2 bg-gray-500 text-gray-700 rounded-lg hover:bg-gray-400 transition-colors"
           >
             Cancel
           </button>

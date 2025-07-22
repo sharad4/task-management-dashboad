@@ -65,6 +65,23 @@ const TaskForm = ({ task, onSubmit, onCancel }) => {
           error={errors.title}
           placeholder="Enter task title..."
         />
+
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Priority
+            </label>
+            <select
+              value={formData.priority}
+              onChange={handleInputChange("priority")}
+              className="w-full p-3 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+            >
+              <option value={TaskPriority.LOW}>LOW</option>
+              <option value={TaskPriority.MEDIUM}>MEDIUM</option>
+              <option value={TaskPriority.HIGH}>HIGH</option>
+            </select>
+          </div>
+        </div>
       </form>
     </div>
   );

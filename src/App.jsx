@@ -1,8 +1,15 @@
+import React from "react";
+import { ThemeProvider } from "./context/ThemeContext";
+import { TaskProvider } from "./context/TaskContext";
+import TaskDashboard from "./pages/TaskDashboard";
+
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello</h1>
-    </>
+    <ThemeProvider>
+      <TaskProvider value={{}}>
+        <TaskDashboard />
+      </TaskProvider>
+    </ThemeProvider>
   );
 }
 

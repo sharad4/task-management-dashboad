@@ -37,4 +37,25 @@ const TaskStats = ({ tasks }) => {
       bgColor: "bg-gray-50",
     },
   ];
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {stats.map((stat) => (
+        <div
+          key={stat.title}
+          className={`p-6 rounded-lg shadow-sm ${stat.bgColor}`}
+        >
+          <h3 className="text-lg font-semibold mb-2 text-gray-800">
+            {stat.title}
+          </h3>
+          <p className={`text-3xl font-bold ${stat.color}`}>{stat.value}</p>
+          {totalTasks > 0 && (
+            <div className="text-sm text-gray-600 mt-1">
+              {Math.round((stat.value / totalTasks) * 100)}%
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
 };

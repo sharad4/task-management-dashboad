@@ -18,4 +18,32 @@ const TaskCard = memo(({ task, onUpdate, onDelete, isSelected, onSelect }) => {
     "in-progress": AlertCircle,
     completed: CheckCircle,
   }[task.status];
+
+  return (
+    <div
+      className={`p-4 bg-white rounded-lg shadow-sm border-l-4 ${
+        PRIORITY_COLORS[task.priority]
+      } ${
+        isDark ? "bg-gray-800 text-white" : ""
+      } transform hover:scale-105 transition-transform duration-200 relative`}
+    >
+      {onSelect && (
+        <input
+          type="checkbox"
+          checked={isSelected}
+          onChange={(e) => onSelect(task.id, e.target.checked)}
+          className="absolute top-4 right-4 z-10"
+        />
+      )}
+
+      <div className="flex items-start justify-between mb-3">
+        <h3 className="font-semibold text-lg pr-8">{task.title}</h3>
+        <div className="flex gap-2">
+          <button>
+            <Edit3 size={16} />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 });

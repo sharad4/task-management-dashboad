@@ -75,3 +75,7 @@ const TaskCard = memo(({ task, onUpdate, onDelete, isSelected, onSelect }) => {
     </div>
   );
 });
+
+TaskCard.displayName = "TaskCard";
+
+export default TaskCard;

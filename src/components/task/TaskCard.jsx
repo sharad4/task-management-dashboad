@@ -60,13 +60,13 @@ const TaskCard = memo(({ task, onUpdate, onDelete, isSelected, onSelect }) => {
           className={`px-3 py-1 rounded-full flex items-center gap-1 ${
             STATUS_COLORS[task.status]
           }`}
-          {task.status.replace('-', ' ')}
         >
           <StatusIcon size={14} />
+          {task.status.replace("-", " ")}
         </span>
         <span className="flex items-center gap-1">
-            <Users size={14} />
-            {task.assignee}
+          <Users size={14} />
+          {task.assignee}
         </span>
       </div>
     </div>

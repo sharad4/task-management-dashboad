@@ -18,10 +18,13 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return (
         <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-          <h2 className="text-lg font-semibold text-red-800">
-            Something went wrong
+          <h2 className="text-lg font-semibold text-red-800 mb-2">
+            Something went wrong!
           </h2>
-          <p className="text-red-600">Please refresh the page.</p>
+          <p className="text-red-600 mb-4">
+            {this.props.fallbackMessage ||
+              "Please refresh the page and try again."}
+          </p>
         </div>
       );
     }

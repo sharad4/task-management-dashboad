@@ -124,3 +124,5 @@ const TaskForm = ({ task, onSubmit, onCancel }) => {
     </div>
   );
 };
+
+export default TaskForm;

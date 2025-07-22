@@ -8,9 +8,7 @@ const Header = ({ onCreateTask, onToggleAnalytics, showAnalytics }) => {
         <h1 className="text-4xl font-bold text-gray-900 mb-2">
           Task Dashboard
         </h1>
-        <p className="text-gray-600">
-          Manage your tasks efficiently with React 19
-        </p>
+        <p className="text-gray-600">Manage your tasks efficiently 📝</p>
       </div>
 
       <div className="flex gap-3">

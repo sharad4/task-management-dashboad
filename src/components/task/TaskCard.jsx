@@ -46,7 +46,11 @@ const TaskCard = memo(({ task, onUpdate, onDelete, isSelected, onSelect }) => {
           >
             <Edit3 size={16} />
           </button>
-          <button>
+          <button
+            onClick={() => onDelete(task.id)}
+            className="p-2 text-gray-500 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors"
+            aria-label="Delete task"
+          >
             <Trash2 size={16} />
           </button>
         </div>

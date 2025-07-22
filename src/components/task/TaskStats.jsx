@@ -50,12 +50,14 @@ const TaskStats = ({ tasks }) => {
           </h3>
           <p className={`text-3xl font-bold ${stat.color}`}>{stat.value}</p>
           {totalTasks > 0 && (
-            <div className="text-sm text-gray-600 mt-1">
+            <p className="text-sm text-gray-600 mt-1">
               {Math.round((stat.value / totalTasks) * 100)}%
-            </div>
+            </p>
           )}
         </div>
       ))}
     </div>
   );
 };
+
+export default TaskStats;

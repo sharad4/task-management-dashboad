@@ -13,3 +13,5 @@ const LaodingSpinner = ({ size = "md", className = "" }) => {
     />
   );
 };
+
+export default LaodingSpinner;

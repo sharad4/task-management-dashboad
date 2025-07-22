@@ -56,7 +56,11 @@ const TaskCard = memo(({ task, onUpdate, onDelete, isSelected, onSelect }) => {
         </div>
       </div>
       <div className="flex items-center gap-4 text-sm text-gray-600">
-        <span>
+        <span
+          className={`px-3 py-1 rounded-full flex items-center gap-1 ${
+            STATUS_COLORS[task.status]
+          }`}
+        >
           <StatusIcon size={14} />
         </span>
       </div>

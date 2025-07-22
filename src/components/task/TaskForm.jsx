@@ -42,4 +42,30 @@ const TaskForm = ({ task, onSubmit, onCancel }) => {
       setErrors(newErrors);
     }
   };
+
+  const handleInputChange = (field) => (e) => {
+    setFormData((prev) => ({ ...prev, [field]: e.target.value }));
+
+    if (errors[field]) {
+      setErrors((prev) => ({ ...prev, [field]: "" }));
+    }
+  };
+
+  return (
+    <div className="bg-white p-6 rounded-lg shadow-lg">
+      <h2 className="text-xl font-bold mb-4">
+        {task ? "Edit Task" : "Create New Task"}
+      </h2>
+      <form onSubmit={handleSubmit}>
+        <CustomInput
+          ref={titleRef}
+          label="Task Title"
+          value={formData.title}
+          onChange={handleInputChange("title")}
+          error={errors.title}
+          placeholder="Enter task title..."
+        />
+      </form>
+    </div>
+  );
 };

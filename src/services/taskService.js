@@ -39,8 +39,8 @@ class TaskService {
                 resolve({
                     success: true,
                     data: { id: taskId }
-                })
-            })
-        })
+                });
+            }, 300);
+        });
     }
 }

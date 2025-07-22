@@ -32,4 +32,15 @@ class TaskService {
             }, 500)
         });
     }
+
+    static async deleteTask(taskId) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve({
+                    success: true,
+                    data: { id: taskId }
+                })
+            })
+        })
+    }
 }

@@ -74,14 +74,36 @@ const TaskForm = ({ task, onSubmit, onCancel }) => {
             <select
               value={formData.priority}
               onChange={handleInputChange("priority")}
-              className="w-full p-3 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
             >
               <option value={TaskPriority.LOW}>LOW</option>
               <option value={TaskPriority.MEDIUM}>MEDIUM</option>
               <option value={TaskPriority.HIGH}>HIGH</option>
             </select>
           </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Status
+            </label>
+            <select
+              value={formData.status}
+              onChange={handleInputChange("status")}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+            >
+              <option value={TaskStatus.TODO}>To Do</option>
+              <option value={TaskStatus.IN_PROGRESS}>In Progress</option>
+              <option value={TaskStatus.COMPLETED}>Completed</option>
+            </select>
+          </div>
         </div>
+        <CustomInput
+          label="Assignee"
+          value={formData.assignee}
+          onChange={handleInputChange("assignee")}
+          error={errors.assignee}
+          placeholder="Enter assignee name"
+        />
       </form>
     </div>
   );

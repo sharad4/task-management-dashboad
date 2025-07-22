@@ -39,8 +39,15 @@ const TaskCard = memo(({ task, onUpdate, onDelete, isSelected, onSelect }) => {
       <div className="flex items-start justify-between mb-3">
         <h3 className="font-semibold text-lg pr-8">{task.title}</h3>
         <div className="flex gap-2">
-          <button>
+          <button
+            onClick={() => onUpdate(task)}
+            className="p-2 text-gray-500 hover:text-blue-50 hover:bg-blue-50 rounded-full transition-colors"
+            aria-label="Edit task"
+          >
             <Edit3 size={16} />
+          </button>
+          <button>
+            <Trash2 size={16} />
           </button>
         </div>
       </div>

@@ -32,3 +32,5 @@ const TaskGrid = ({
     </div>
   );
 };
+
+export default TaskGrid;

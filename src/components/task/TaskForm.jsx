@@ -18,4 +18,28 @@ const TaskForm = ({ task, onSubmit, onCancel }) => {
   useEffect(() => {
     titleRef.current?.focus();
   }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const newErrors = validateTaskForm(formData);
+
+    if (Object.keys(newErrors).length === 0) {
+        setIsSubmitting(true);
+        try {
+            await onSubmit(formData);
+            setFormData({
+                title: '',
+                priority: TaskPriority.MEDIUM,
+                status: TaskStatus.TODO,
+                assignee: ''
+            });
+        } catch (error) {
+            console.error('Error submitting task:', error);
+        } finally {
+            setIsSubmitting(false);
+        }
+    } selse {
+        setErrors(newErrors);
+    }
+  }
 };

@@ -23,7 +23,7 @@ watcher.on('change', (filePath) => {
         const commitMessage = `Auto-commit: update ${fileList}`;
 
         console.log(`🚀 Committing changes: ${commitMessage}`);
-        exec(`git add . && git commit -m "${commitMessage}" && git push`, (error, stdout, stderr) => {
+        exec(`git add . && git commit -m "${commitMessage}"`, (error, stdout) => {
             if (error) {
                 console.error(`Commit error: ${error}`);
             } else {

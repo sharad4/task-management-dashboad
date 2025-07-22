@@ -25,6 +25,7 @@ const CustomInput = forwardRef(
           } ${className}`}
           {...props}
         />
+        {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
       </div>
     );
   }

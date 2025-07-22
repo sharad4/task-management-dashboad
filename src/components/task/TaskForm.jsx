@@ -104,6 +104,15 @@ const TaskForm = ({ task, onSubmit, onCancel }) => {
           error={errors.assignee}
           placeholder="Enter assignee name"
         />
+        <div className="flex gap-3">
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50"
+          >
+            {isSubmitting ? "Saving..." : task ? "Update" : "Create"} Task
+          </button>
+        </div>
       </form>
     </div>
   );

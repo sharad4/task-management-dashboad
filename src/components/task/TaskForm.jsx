@@ -10,4 +10,12 @@ const TaskForm = ({ task, onSubmit, onCancel }) => {
     status: task?.status || TaskStatus.TODO,
     assignee: task?.assignee || "",
   });
+
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    titleRef.current?.focus();
+  }, []);
 };

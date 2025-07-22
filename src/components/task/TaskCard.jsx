@@ -64,7 +64,7 @@ const TaskCard = memo(({ task, onUpdate, onDelete, isSelected, onSelect }) => {
         >
           <StatusIcon size={14} />
         </span>
-        <span>
+        <span className="flex items-center gap-1">
             <Users size={14} />
         </span>
       </div>

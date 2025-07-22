@@ -17,6 +17,11 @@ const CustomInput = forwardRef(
             {label}
           </label>
         )}
+        <input
+          id={id}
+          ref={ref}
+          className={`w-full p-3 border rounded-lg focus-within:`}
+        />
       </div>
     );
   }

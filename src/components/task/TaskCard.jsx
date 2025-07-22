@@ -68,6 +68,7 @@ const TaskCard = memo(({ task, onUpdate, onDelete, isSelected, onSelect }) => {
           <Users size={14} />
           {task.assignee}
         </span>
+        <span>{task.priority} priority</span>
       </div>
     </div>
   );

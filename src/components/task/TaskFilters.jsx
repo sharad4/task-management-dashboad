@@ -61,3 +61,5 @@ const TaskFilters = ({
     </div>
   );
 };
+
+export default TaskFilters;

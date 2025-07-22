@@ -66,6 +66,7 @@ const TaskCard = memo(({ task, onUpdate, onDelete, isSelected, onSelect }) => {
         </span>
         <span className="flex items-center gap-1">
             <Users size={14} />
+            {task.assignee}
         </span>
       </div>
     </div>

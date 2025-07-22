@@ -55,6 +55,11 @@ const TaskCard = memo(({ task, onUpdate, onDelete, isSelected, onSelect }) => {
           </button>
         </div>
       </div>
+      <div className="flex items-center gap-4 text-sm text-gray-600">
+        <span>
+          <StatusIcon size={14} />
+        </span>
+      </div>
     </div>
   );
 });

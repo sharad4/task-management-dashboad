@@ -13,7 +13,7 @@ import TaskFilters from "../components/task/TaskFilters";
 import TaskGrid from "../components/task/TaskGrid";
 import TaskForm from "../components/task/TaskForm";
 import TaskStats from "../components/task/TaskStats";
-import BulkActions from "../components/common/BulkActions";
+import BulkActions from "../components/comman/BulkActions";
 import Analytics from "../components/task/Analytics";
 import Modal from "../components/ui/Modal";
 
@@ -127,7 +127,7 @@ const TaskDashboard = () => {
 
   return (
     <Layout>
-      {/_ Header _/}
+      {/* Header */}
 
       <Header
         onCreateTask={handleCreateNewTask}

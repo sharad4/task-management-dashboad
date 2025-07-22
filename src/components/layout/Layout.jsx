@@ -1,5 +1,5 @@
 import React from "react";
-import ErrorBoundary from "../common/ErrorBoundary";
+import ErrorBoundary from "../comman/ErrorBoundary";
 
 const Layout = ({ children }) => {
   return (

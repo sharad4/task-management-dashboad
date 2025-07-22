@@ -21,15 +21,15 @@ const TaskFilters = ({
   return (
     <div className="flex flex-wrap gap-4 p-4 bg-gray-50 rounded-lg mb-6">
       <div className="flex-1 min-w-64">
-        <div className="relative">
-          <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400 " />
+        <div className="relative w-full">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none" />
           <input
             type="text"
             placeholder="Search tasks..."
             value={searchTerm}
             onChange={handleSearchChange}
-            className={`w-full pl-10 pr-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition-opacity ${
-              isPending ? "opacity-50" : ""
+            className={`w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-opacity duration-200 ${
+              isPending ? "opacity-50 cursor-not-allowed" : ""
             }`}
           />
         </div>
@@ -51,10 +51,10 @@ const TaskFilters = ({
 
       <select
         value={sortBy}
-        onChange={(e) => onFilterChange(e.target.value)}
+        onChange={(e) => onSortChange(e.target.value)}
         className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
       >
-        <option value={SortBy.CREAETD_AT}>Sort by</option>
+        <option value={SortBy.CREAETD_AT}>Sort by Date</option>
         <option value={SortBy.PRIORITY}>Sort by Priority</option>
         <option value={SortBy.TITLE}>Sort by Title</option>
       </select>

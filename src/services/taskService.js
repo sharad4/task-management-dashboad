@@ -21,4 +21,15 @@ class TaskService {
             }, 500);
         });
     }
+
+    static async updateTask(taskId, updates) {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+            resolve({
+                sucess: true,
+                data: { id: taskId, ...updates }
+            });
+            }, 500)
+        });
+    }
 }
